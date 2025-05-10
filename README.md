@@ -1,10 +1,4 @@
-# Money Tree Proof of Concept (PoC)
+# Money Tree POC
 
-**The Money Tree** is a modular, solar-powered crypto mining system focused on efficiency, sustainability, and off-grid operation.
+This repository contains the proof-of-concept design for "The Money Tree" — a highly efficient, solar-powered, modular mining rig designed to grow income while minimizing environmental impact.
 
-This repository documents the early proof-of-concept (PoC) design for a dual-GPU system using a Raspberry Pi 5 and 24V battery setup.
-
-## Contents
-- System Diagram
-- Prototype Performance Notes
-- Power & Revenue Estimates

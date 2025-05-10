@@ -1,47 +1,29 @@
-## Prototype Performance Summary — 2 GPU Configuration
+# Prototype Build Notes
 
-**Target Use:** Off-grid, solar-powered crypto mining  
-**Prototype Version:** The Money Tree v0.1  
-**Date:** May 2025
+## Overview
 
----
+This prototype demonstrates the core principles of the Budget Miner Project:
+- Efficient off-grid mining using solar
+- Modular and scalable GPU support
+- Low idle power usage
+- Simple, open-source platform built on Raspberry Pi
 
-### Hardware Specs
+## Hardware Specs
 
-- **2 x GPUs** (e.g. RTX 3060 / RX 6600)
+- **2 x GPUs** (e.g. RTX 3060 or RX 6600)
 - **Raspberry Pi 5 (8GB)**
-- **24V battery bank (2S2P)**
+- **24V battery bank (2S2P configuration)**
 - **2 x 30A DC-DC buck converters (24V → 12V)**
-- **550W PSU (solar-fed or fallback grid input)**
+- **Cooling system and fusing**
+- **Solar input via MPPT charge controller**
+- *(No ATX PSU required — system is fully DC-powered)*
 
----
+## Power System
 
-### Estimated Power Draw
+This prototype eliminates the need for an ATX power supply by using dedicated DC-DC buck converters to power each GPU directly from the 24V battery bank. This drastically reduces AC-DC conversion losses, enabling superior efficiency and modularity.
 
-| Component              | Power (W) | Notes |
-|------------------------|-----------|-------|
-| 2 x GPUs (mining load) | 240–300W  | ~120–150W per GPU (tuned) |
-| Pi 5 + monitoring      | 8–12W     | Low power SBC operation |
-| Buck conversion losses | ~20W      | ~5–10% inefficiency buffer |
-| Fans & sensors         | ~10–15W   | System cooling estimate |
-| **Total**              | **~340–360W** | Off-grid solar capable |
+## Next Steps
 
----
-
-### Estimated Revenue (May 2025)
-
-| Metric                | Value |
-|------------------------|-------|
-| Combined hashrate      | ~90–100 MH/s (ethash / KHeavyHash) |
-| Monthly revenue        | ~$25–$35 (conservative estimate) |
-| Monthly energy use     | ~259 kWh (at 360W continuous) |
-| Solar-powered cost     | $0 (off-grid use case) |
-| ROI Value Prop         | Income + energy independence |
-
----
-
-### Efficiency Snapshot
-
-> **~7–8¢ per kWh equivalent earnings** — without paying for grid power.
-
-The Money Tree's early prototype demonstrates that profitable mining can be modular, scalable, and powered entirely by light.
+- Log performance metrics
+- Validate uptime on battery only
+- Build GitHub Pages landing with wiring instructions
